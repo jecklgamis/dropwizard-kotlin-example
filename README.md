@@ -1,6 +1,8 @@
 # dropwizard-kotlin-example
 An example Dropwizard app using Kotlin
 
+[![Build Status](https://travis-ci.org/jecklgamis/dropwizard-kotlin-example.svg?branch=master)](https://travis-ci.org/jecklgamis/dropwizard-kotlin-example)
+
 * Dropwizard 1.1.2
 * Kotlin 1.1.3
 * Java 8
