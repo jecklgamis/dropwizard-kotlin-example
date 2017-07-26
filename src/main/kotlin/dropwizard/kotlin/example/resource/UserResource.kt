@@ -23,7 +23,10 @@ class UserResource {
 
     @GET
     fun get(@QueryParam("username") username: String): Response {
-        return Response.ok().entity(userDb).build()
+        if (userDb.containsKey(username)) {
+            return Response.ok().entity(userDb[username]).build()
+        }
+        return Response.noContent().build()
     }
 
     @PUT

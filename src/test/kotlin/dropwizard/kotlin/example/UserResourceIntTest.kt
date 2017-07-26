@@ -24,36 +24,35 @@ class UserResourceIntTest {
 
     @Test
     fun testGet() {
-        val response = client().target(format("http://127.0.0.1:%d/user", rule.localPort))
+        val response = client().target("http://127.0.0.1:${rule.localPort}/user")
                 .queryParam("username", "me")
                 .request().get(Response::class.java)
-        assertEquals(200, response.status.toLong())
-        assertEquals("application/json", response.headers.getFirst("Content-Type"))
-        assertEquals("{}", response.readEntity(String::class.java))
+        assertEquals(204, response.status)
     }
 
     @Test
     fun testPut() {
-        val response = client().target(format("http://127.0.0.1:%d/user", rule.localPort))
-                .request().put(Entity.entity(User("me", "me@example.com"), APPLICATION_JSON), Response::class.java)
-        assertEquals(200, response.status.toLong())
+        val response = client().target("http://127.0.0.1:${rule.localPort}/user")
+                .request().put(Entity.entity(User("me", "me@example.com"), APPLICATION_JSON),
+                Response::class.java)
+        assertEquals(200, response.status)
     }
 
     @Test
     fun testPost() {
-        val response = client().target(format("http://127.0.0.1:%d/user", rule.localPort))
+        val response = client().target("http://127.0.0.1:${rule.localPort}/user")
                 .request().post(Entity.entity(User("me", "me@example.com"), APPLICATION_JSON), Response::class.java)
-        assertEquals(200, response.status.toLong())
+        assertEquals(200, response.status)
     }
 
     @Test
     fun testDelete() {
-        var response = client().target(format("http://127.0.0.1:%d/user", rule.localPort))
+        var response = client().target("http://127.0.0.1:${rule.localPort}/user")
                 .request().put(Entity.entity(User("me", "me@example.com"), APPLICATION_JSON), Response::class.java)
-        assertEquals(200, response.status.toLong())
+        assertEquals(200, response.status)
 
         response = client().target(format("http://127.0.0.1:%d/user", rule.localPort)).queryParam("username", "me").request().delete(Response::class.java)
-        assertEquals(200, response.status.toLong())
+        assertEquals(200, response.status)
     }
 
     private fun client(): Client {
