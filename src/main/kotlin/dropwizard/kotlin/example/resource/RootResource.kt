@@ -11,7 +11,7 @@ import javax.ws.rs.core.Response
 class RootResource {
 
     @GET
-    @Produces(*arrayOf(MediaType.APPLICATION_JSON))
+    @Produces(MediaType.APPLICATION_JSON)
     fun default(): Response {
         val entity = ImmutableMap.builder<String, String>().put("message", "It works!").build()
         return Response.ok().entity(entity).build()
