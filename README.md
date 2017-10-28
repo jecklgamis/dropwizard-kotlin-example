@@ -3,8 +3,8 @@ An example Dropwizard app using Kotlin
 
 [![Build Status](https://travis-ci.org/jecklgamis/dropwizard-kotlin-example.svg?branch=master)](https://travis-ci.org/jecklgamis/dropwizard-kotlin-example)
 
-* Dropwizard 1.1.2
-* Kotlin 1.1.3
+* Dropwizard 1.2.0
+* Kotlin 1.1.51
 * Java 8
 * Maven 3
 * Example resource , health check, filter.
