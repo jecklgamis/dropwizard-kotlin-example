@@ -11,7 +11,7 @@ COPY docker-entrypoint.sh /usr/local/app/bin
 COPY src/main/resources/config.yml /usr/local/app/config
 
 RUN chown -R app:app /usr/local/app
-RUN chmod +x /usr/local/app/bin/run-app.sh
+RUN chmod +x /usr/local/app/bin/docker-entrypoint.sh
 
 CMD ["/usr/local/app/bin/docker-entrypoint.sh"]
 
