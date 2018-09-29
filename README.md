@@ -3,12 +3,6 @@ An example Dropwizard app using Kotlin
 
 [![Build Status](https://travis-ci.org/jecklgamis/dropwizard-kotlin-example.svg?branch=master)](https://travis-ci.org/jecklgamis/dropwizard-kotlin-example)
 
-* Dropwizard 1.2.0
-* Kotlin 1.1.51
-* Java 8
-* Maven 3
-* Example resource , health check, filter.
-
 # Running The App
 ```
 mvn clean package
@@ -16,9 +10,7 @@ java -jar target/dropwizard-kotlin-example.jar server src/main/resources/config.
 ```
 
 # Running The App In Docker
-This assumes you have a working docker environment
-
-.Create docker image
+Create docker image
 ```
 docker build -t dropwizard-kotlin-example .
 ```
