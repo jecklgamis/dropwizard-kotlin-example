@@ -24,8 +24,7 @@ Point your browser to `http://localhost:8080` or use `curl` in command line.
 curl -v  http://localhost:8080/
 curl -v -k https://localhost:8443/
 ```
-Actuator endpoints:
-* `http://localhost:8080/actuator/metrics`
-* `http://localhost:8080/actuator/health`
+Operational menu endpoint:
+* `http://localhost:8081`
 
 
