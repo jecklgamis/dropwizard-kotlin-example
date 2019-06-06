@@ -1,49 +1,31 @@
-# dropwizard-kotlin-example
-An example Dropwizard app using Kotlin
+## Dropwizard Kotlin Example
 
 [![Build Status](https://travis-ci.org/jecklgamis/dropwizard-kotlin-example.svg?branch=master)](https://travis-ci.org/jecklgamis/dropwizard-kotlin-example)
 
-# Running The App
+This is an example Dropwizard app using Kotlin. 
+
+## Running The App
+Ensure you have Java 8 or later.
 ```
 mvn clean package
-java -jar target/dropwizard-kotlin-example.jar server src/main/resources/config.yml
+java -jar target/dropwizard-kotlin-example.jar
 ```
 
-# Running The App In Docker
-Create docker image
+## Running The App Using Docker
+Ensure you have a working Docker environment.
 ```
-docker build -t dropwizard-kotlin-example .
-```
-
-Run the app inside docker
-```
-docker run dropwizard-kotlin-example
+make dist image run
 ```
 
-Run bash shell inside docker (you know, to check some stuff)
-```
-docker run -i -t dropwizard-kotlin-example /bin/bash
-```
+## Testing The Endpoints
+Point your browser to `http://localhost:8080` or use `curl` in command line.
 
-# GET, PUT, POST, DELETE Examples
-PUT Request
 ```
-curl -v -X PUT -H "Content-Type:application/json" "http://localhost:8080/user" -d'{"username":"me", "email":"me@example.com"}'
+curl -v  http://localhost:8080/
+curl -v -k https://localhost:8443/
 ```
-
-POST Request
-```
-curl -v -X POST -H "Content-Type:application/json" "http://localhost:8080/user" -d'{"username":"me", "email":"me@example.com"}'
-```
-
-GET Request
-```
-curl -v -X GET -H "Content-Type:application/json" "http://localhost:8080/user?username=me"
-```
-
-DELETE Request
-```
-curl -v -X DELETE -H "Content-Type:application/json" "http://localhost:8080/user?username=me"
-```
+Actuator endpoints:
+* `http://localhost:8080/actuator/metrics`
+* `http://localhost:8080/actuator/health`
 
 

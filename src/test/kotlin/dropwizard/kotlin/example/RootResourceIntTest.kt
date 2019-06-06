@@ -1,5 +1,6 @@
 package dropwizard.kotlin.example
 
+import io.dropwizard.testing.ConfigOverride
 import io.dropwizard.testing.ResourceHelpers.resourceFilePath
 import io.dropwizard.testing.junit.DropwizardAppRule
 import org.glassfish.jersey.client.ClientConfig
@@ -15,8 +16,12 @@ import javax.ws.rs.core.Response
 class RootResourceIntTest {
 
     companion object {
-        @ClassRule @JvmField
-        val rule = DropwizardAppRule(ExampleApp::class.java, resourceFilePath("config.yml"))
+        @ClassRule
+        @JvmField
+        val rule = DropwizardAppRule(ExampleApp::class.java,
+                resourceFilePath("config.yml"),
+                ConfigOverride.config("server.applicationConnectors[1].keyStorePath", "src/main/resources/keystore.pfx")
+        )
     }
 
     @Test
@@ -26,7 +31,7 @@ class RootResourceIntTest {
         assertEquals(200, response.status.toLong())
         assertEquals("application/json", response.headers.getFirst("Content-Type"))
         val entity = response.readEntity(Map::class.java)
-        assertEquals("It works!", entity["message"])
+        assertEquals("dropwizard-kotlin-example", entity["name"])
     }
 
     private fun client(): Client {
