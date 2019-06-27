@@ -6,7 +6,7 @@ server:
       port: 8080
     - type: https
       port: 8443
-      certAlias: some-server
+      certAlias: dropwizard-kotlin-example
       keyStorePath: keystore.pfx
       keyStorePassword: changeit
       validateCerts: false
