@@ -2,8 +2,10 @@
 
 [![Build Status](https://travis-ci.org/jecklgamis/dropwizard-kotlin-example.svg?branch=master)](https://travis-ci.org/jecklgamis/dropwizard-kotlin-example)
 
-This is an example Dropwizard app using Kotlin. 
+This is an example Dropwizard app using Kotlin.
 
+A CI built Docker image is available in Docker Hub, run it using: `docker run jecklgamis/dropwizard-kotlin-example` 
+ 
 ## Running The App
 Ensure you have Java 8 or later.
 ```
