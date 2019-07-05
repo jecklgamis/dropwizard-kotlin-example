@@ -8,3 +8,4 @@ services:
 
 script:
   - docker build -t jecklgamis/dropwizard-kotlin-example .
+  - docker push jecklgamis/dropwizard-kotlin-example:latest
