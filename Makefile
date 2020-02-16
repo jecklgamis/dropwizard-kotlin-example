@@ -10,3 +10,4 @@ run-bash:
 	 docker run -i -t dropwizard-kotlin-example /bin/bash
 keystore:
 	 ./generate-keystore.sh
+up: keystore dist image run
