@@ -4,6 +4,8 @@
 
 This is an example Dropwizard app using Kotlin.
 
+Docker Hub: `docker run -p 8080:8080 -p 8443:8443 jecklgamis/dropwizard-kotlin-example:latest` 
+ 
 ## Running The App
 Ensure you have Java 8 or later.
 ```
