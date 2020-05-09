@@ -1,4 +1,4 @@
-FROM jecklgamis/java-runtime:latest
+FROM jecklgamis/openjdk-8-jre:latest
 MAINTAINER Jerrico Gamis <jecklgamis@gmail.com>
 
 RUN groupadd -r app && useradd -r -gapp app

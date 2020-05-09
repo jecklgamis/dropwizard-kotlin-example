@@ -17,3 +17,9 @@ server:
 
 logging:
   level: INFO
+  appenders:
+    - type: file
+      currentLogFilename: logs/dropwizard-kotlin-example
+      archivedLogFilenamePattern: logs/dropwizard-kotlin-example-%d.log.gz
+      archivedFileCount: 5
+      timeZone: UTC

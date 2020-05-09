@@ -1,7 +1,6 @@
 package dropwizard.kotlin.example.resource
 
 import com.codahale.metrics.annotation.Timed
-import com.google.common.collect.ImmutableMap
 import javax.ws.rs.GET
 import javax.ws.rs.Path
 import javax.ws.rs.Produces
@@ -15,11 +14,9 @@ class RootResource(private val name: String) {
     @Produces(MediaType.APPLICATION_JSON)
     @Timed
     fun default(): Response {
-        val entity = ImmutableMap.builder<String, Any>()
-                .put("name", name)
-                .put("java.version", System.getProperty("java.version"))
-                .put("java.runtime.name", System.getProperty("java.runtime.name"))
-                .build()
+        val entity = mapOf("name" to name,
+                "java.version" to System.getProperty("java.version"),
+                "java.runtime.name" to System.getProperty("java.runtime.name"))
         return Response.ok().entity(entity).build()
     }
 }
