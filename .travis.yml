@@ -3,3 +3,9 @@ language: java
 jdk:
   - openjdk8
 
+services:
+  - docker
+
+script:
+  - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
+  - make image push
