@@ -1,0 +1,43 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: dropwizard-kotlin-example
+  labels:
+    app: dropwizard-kotlin-example
+spec:
+  type: LoadBalancer
+  ports:
+    - port: 80
+      protocol: TCP
+      targetPort: 8080
+      name: http
+    - port: 443
+      protocol: TCP
+      targetPort: 8443
+      name: https
+  selector:
+    app: dropwizard-kotlin-example
+
+---
+
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: dropwizard-kotlin-example
+spec:
+  selector:
+    matchLabels:
+      app: dropwizard-kotlin-example
+  replicas: 2
+  template:
+    metadata:
+      labels:
+        app: dropwizard-kotlin-example
+    spec:
+      containers:
+        - name: dropwizard-kotlin-example
+          image: jecklgamis/dropwizard-kotlin-example:latest
+          ports:
+            - containerPort: 8080
+            - containerPort: 8443
+

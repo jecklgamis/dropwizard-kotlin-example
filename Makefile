@@ -3,7 +3,7 @@ IMAGE_TAG:=latest
 default:
 	cat ./Makefile
 dist: 
-	mvn clean package
+	./mvnw clean package
 image:
 	 docker build -t $(IMAGE_NAME):$(IMAGE_TAG) .
 run:
