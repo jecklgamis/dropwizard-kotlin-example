@@ -32,12 +32,12 @@ Operational menu endpoint:
 
 ## Running The App In Kubernetes
 
-This is an example Kubernetes deployment. Ensure you have working Kubernetes cluster and 
+This is an example Kubernetes deployment. Ensure you have a working Kubernetes cluster and 
 properly configured `kubectl` context (i.e `~/.kube/config`).
 
 This deployment will:
 * use the `jecklgamis/dropwizard-kotlin-example` image from Docker Hub
-* create 2 pods and exposing both HTTP (8080) and HTTPS endpoints (8443)
+* create 2 pods and exposing both HTTP (8080) and HTTPS (8443) endpoints 
 * create service with `LoadBalancer` type exposing ports HTTP (80) and HTTPS (443)
 
 #### Create pods and service:
