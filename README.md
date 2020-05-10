@@ -43,7 +43,7 @@ This deployment will:
 #### Create pods and service:
 ```
 cd deployment/k8s 
-kube apply -f deployment.yaml
+kubectl apply -f deployment.yaml
 ```
 
 #### Verify pods are running:
