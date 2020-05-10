@@ -5,6 +5,11 @@ server:
     appenders:
       - type: console
       - type: file
+        currentLogFilename: logs/access.log
+        threshold: ALL
+        archive: true
+        archivedLogFilenamePattern: logs/access.%d.log.gz
+        archivedFileCount: 5
   applicationConnectors:
     - type: http
       port: 8080
@@ -25,6 +30,8 @@ logging:
     - type: console
     - type: file
       currentLogFilename: logs/dropwizard-kotlin-example.log
+      threshold: ALL
+      archive: true
       archivedLogFilenamePattern: logs/dropwizard-kotlin-example-%d.log.gz
       archivedFileCount: 5
       timeZone: UTC

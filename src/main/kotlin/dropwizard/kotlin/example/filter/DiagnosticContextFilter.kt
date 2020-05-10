@@ -14,13 +14,13 @@ class DiagnosticContextFilter : ContainerRequestFilter, ContainerResponseFilter 
 
     override fun filter(requestContext: ContainerRequestContext) {
         val id = randomUUID().toString()
-        log.info("[${Thread.currentThread().name}] PUT : $id")
+        log.debug("[${Thread.currentThread().name}] PUT : $id")
         MDC.put(requestId, id)
     }
 
     override fun filter(requestContext: ContainerRequestContext, responseContext: ContainerResponseContext) {
         val id = MDC.get(requestId)
-        log.info("[${Thread.currentThread().name}] REMOVE : $id")
+        log.debug("[${Thread.currentThread().name}] REMOVE : $id")
         MDC.remove(requestId)
     }
 }
