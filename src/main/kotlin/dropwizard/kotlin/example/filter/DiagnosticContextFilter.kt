@@ -20,7 +20,7 @@ class DiagnosticContextFilter : ContainerRequestFilter, ContainerResponseFilter 
 
     override fun filter(requestContext: ContainerRequestContext, responseContext: ContainerResponseContext) {
         val id = MDC.get(requestId)
-        log.info("[${Thread.currentThread().name}] REMOVE : $requestId")
-        MDC.remove(id)
+        log.info("[${Thread.currentThread().name}] REMOVE : $id")
+        MDC.remove(requestId)
     }
 }
