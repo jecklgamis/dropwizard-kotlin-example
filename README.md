@@ -101,3 +101,7 @@ Example output:
 Note that the Service's IP address is virtual. See [this](https://kubernetes.io/docs/concepts/services-networking/connect-applications-service/)
 for details. 
 
+#### Delete the deployment
+```
+kubectl delete deployment,service dropwizard-kotlin-example
+```
