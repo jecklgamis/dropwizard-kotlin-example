@@ -1,6 +1,10 @@
 appName: dropwizard-kotlin-example
 
 server:
+  requestLog:
+    appenders:
+      - type: console
+      - type: file
   applicationConnectors:
     - type: http
       port: 8080
@@ -18,6 +22,7 @@ server:
 logging:
   level: INFO
   appenders:
+    - type: console
     - type: file
       currentLogFilename: logs/dropwizard-kotlin-example.log
       archivedLogFilenamePattern: logs/dropwizard-kotlin-example-%d.log.gz
