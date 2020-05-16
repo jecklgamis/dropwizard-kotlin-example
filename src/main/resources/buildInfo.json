@@ -1,0 +1,1 @@
+{ "version":  "${changeNumber}", "buildTime": "${buildTime}", "branch": "${buildBranch}" }
