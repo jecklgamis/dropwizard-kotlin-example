@@ -4,7 +4,9 @@
 
 This is an example Dropwizard app using Kotlin.
 
-Docker Hub: `docker run -p 8080:8080 -p 8443:8443 -p 8081:8081 jecklgamis/dropwizard-kotlin-example:latest` 
+Run locally: `docker run -p 8080:8080 -p 8443:8443 -p 8081:8081 jecklgamis/dropwizard-kotlin-example:latest`
+
+Run on Kubernetes: `kubectl apply -f deployment/k8s/deployment.yaml`  
  
 ## Running The App
 Ensure you have Java 8 installed.
@@ -40,13 +42,13 @@ This deployment will:
 * create 2 pods and exposing both HTTP (8080) and HTTPS (8443) endpoints 
 * create service with `LoadBalancer` type exposing ports HTTP (80) and HTTPS (443)
 
-#### Create pods and service:
+#### Create pods and service
 ```
 cd deployment/k8s 
 kubectl apply -f deployment.yaml
 ```
 
-#### Verify pods are running:
+#### Verify pods are running
 ```
 kubectl get pods -l app=dropwizard-kotlin-example -o wide
 ```
