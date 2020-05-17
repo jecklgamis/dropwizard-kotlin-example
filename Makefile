@@ -1,9 +1,12 @@
 IMAGE_NAME:=jecklgamis/dropwizard-kotlin-example
 IMAGE_TAG:=latest
+changeNumber:=$(shell git rev-parse HEAD)
+buildTime:=$(shell date -u +%Y-%m-%dT%H:%M:%SZ)
+buildBranch:=$(shell git rev-parse --abbrev-ref HEAD)
 default:
 	cat ./Makefile
 dist: 
-	./mvnw clean package
+	./mvnw -DchangeNumber=$(changeNumber) -DbuildTime=$(buildTime) -DbuildBranch=$(buildBranch) clean package
 image:
 	 docker build -t $(IMAGE_NAME):$(IMAGE_TAG) .
 run:
