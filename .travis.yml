@@ -6,6 +6,7 @@ jdk:
 services:
   - docker
 
+install: skip
 script:
   - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
-  - make image push
+  - make dist image push
