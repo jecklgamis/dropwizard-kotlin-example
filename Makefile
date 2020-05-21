@@ -1,5 +1,5 @@
 IMAGE_NAME:=jecklgamis/dropwizard-kotlin-example
-IMAGE_TAG:=latest
+IMAGE_TAG:=$(shell git rev-parse HEAD)
 changeNumber:=$(shell git rev-parse HEAD)
 buildTime:=$(shell date -u +%Y-%m-%dT%H:%M:%SZ)
 buildBranch:=$(shell git rev-parse --abbrev-ref HEAD)
