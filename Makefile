@@ -8,7 +8,7 @@ default:
 dist: 
 	./mvnw -DchangeNumber=$(changeNumber) -DbuildTime=$(buildTime) -DbuildBranch=$(buildBranch) clean package
 image:
-	 docker build -t $(IMAGE_NAME):$(IMAGE_TAG) .
+	 docker build -t $(IMAGE_NAME):$(IMAGE_TAG) -t $(IMAGE_NAME):latest .
 run:
 	 docker run -p 8080:8080 -p 8081:8081 -p 8443:8443 $(IMAGE_NAME):$(IMAGE_TAG)
 run-bash:
