@@ -18,3 +18,4 @@ keystore:
 up: keystore dist image run
 push:
 	 docker push $(IMAGE_NAME):$(IMAGE_TAG)
+	 docker push $(IMAGE_NAME):latest
