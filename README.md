@@ -33,8 +33,56 @@ Operational menu endpoint:
 * `http://localhost:8081`
 
 ## Running The App In Kubernetes
-This is an example Kubernetes deployment. Ensure you have a working Kubernetes cluster and properly configured `kubectl` 
-context (i.e `~/.kube/config`).
+This is an example Kubernetes deployment. This assumes you have a basic knowledge on [Kubernetes](https://kubernetes.io). 
+
+### The Kubernetes Pod and Service Definition
+```
+apiVersion: v1
+kind: Service
+metadata:
+  name: dropwizard-kotlin-example
+  labels:
+    app: dropwizard-kotlin-example
+spec:
+  type: NodePort
+  ports:
+    - port: 80
+      protocol: TCP
+      targetPort: 8080
+      name: http
+    - port: 443
+      protocol: TCP
+      targetPort: 8443
+      name: https
+  selector:
+    app: dropwizard-kotlin-example
+
+---
+
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: dropwizard-kotlin-example
+spec:
+  selector:
+    matchLabels:
+      app: dropwizard-kotlin-example
+  replicas: 2
+  template:
+    metadata:
+      labels:
+        app: dropwizard-kotlin-example
+    spec:
+      containers:
+        - name: dropwizard-kotlin-example
+          image: jecklgamis/dropwizard-kotlin-example:latest
+          ports:
+            - containerPort: 8080
+            - containerPort: 8443
+```
+
+### Requirements
+Ensure you have a working Kubernetes cluster and properly configured `kubectl` context (i.e `~/.kube/config`).
 
 #### Create pods and service
 ```
