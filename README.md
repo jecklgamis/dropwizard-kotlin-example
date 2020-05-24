@@ -52,14 +52,14 @@ dropwizard-kotlin-example-6d84898db6-6sl4p   1/1     Running   0          6m32s 
 dropwizard-kotlin-example-6d84898db6-dlwbf   1/1     Running   0          6m32s   10.244.0.40   pool-74ylys6z6-377s5   <none>           <none>
 ```
 
-#### Verify pod end point using a `kubectl port-forward`
+#### Verify pod end point using `kubectl port-forward`
 ```
 export POD_NAME=$(kubectl get pods --namespace default -l "app=dropwizard-kotlin-example" -o jsonpath="{.items[0].metadata.name}")
 kubectl --namespace default port-forward $POD_NAME 8080
 curl http://localhost:8080
 ```
 
-#### Login to one of the containers
+#### Log in to one of the containers
 ```
 kubectl exec -it $POD_NAME -- bin/bash
 ```
