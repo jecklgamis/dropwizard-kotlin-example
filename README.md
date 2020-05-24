@@ -150,5 +150,5 @@ See [Service](https://kubernetes.io/docs/concepts/services-networking/service/) 
 
 #### Delete the deployment
 ```
-kubectl delete deployment,service dropwizard-kotlin-example
+kubectl delete -f deployment/k8s/deployment.yaml 
 ```
