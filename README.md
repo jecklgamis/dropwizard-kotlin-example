@@ -1,6 +1,6 @@
 ## Dropwizard Kotlin Example
 
-[![Build Status](https://travis-ci.org/jecklgamis/dropwizard-kotlin-example.svg?branch=master)](https://travis-ci.org/jecklgamis/dropwizard-kotlin-example)
+[![Build Status](https://travis-ci.org/jecklgamis/dropwizard-kotlin-example.svg?branch=main)](https://travis-ci.org/jecklgamis/dropwizard-kotlin-example)
 
 This is an example Dropwizard app using Kotlin.
 
