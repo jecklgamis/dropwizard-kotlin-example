@@ -8,7 +8,7 @@ RUN mkdir -m 0755 -p ${APP_HOME}/bin
 RUN mkdir -m 0755 -p ${APP_HOME}/config
 RUN mkdir -m 0755 -p ${APP_HOME}/logs
 
-COPY target/dke-project.jar ${APP_HOME}/bin
+COPY target/dropwizard-kotlin-example.jar ${APP_HOME}/bin
 COPY docker-entrypoint.sh /
 COPY src/main/resources/config.yml ${APP_HOME}/config
 COPY src/main/resources/keystore.pfx ${APP_HOME}
