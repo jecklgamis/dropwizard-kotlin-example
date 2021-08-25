@@ -1,6 +1,6 @@
 ## Dropwizard Kotlin Example
 
-[![Build Status](https://travis-ci.org/jecklgamis/dropwizard-kotlin-example.svg?branch=main)](https://travis-ci.org/jecklgamis/dropwizard-kotlin-example)
+[![Build](https://github.com/jecklgamis/dropwizard-kotlin-example/actions/workflows/build.yml/badge.svg)](https://github.com/jecklgamis/dropwizard-kotlin-example/actions/workflows/build.yml)
 
 This is an example Dropwizard app using Kotlin.
 
@@ -11,6 +11,7 @@ Run on Kubernetes: `kubectl apply -f https://raw.githubusercontent.com/jecklgami
 ## Running The App
 Ensure you have Java 8 installed.
 ```
+./generate-keystore.sh
 ./mvnw clean package
 java -jar target/dropwizard-kotlin-example.jar
 ```
