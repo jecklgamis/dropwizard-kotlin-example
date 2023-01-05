@@ -4,7 +4,7 @@
 
 This is an example Dropwizard app using Kotlin.
 
-Run locally: `docker run -p 8080:8080 -p 8443:8443 -p 8081:8081 jecklgamis/dropwizard-kotlin-example:main`
+Docker: `docker run -p 8080:8080 -p 8443:8443 -p 8081:8081 jecklgamis/dropwizard-kotlin-example:main`
 
 Run on Kubernetes: `kubectl apply -f https://raw.githubusercontent.com/jecklgamis/dropwizard-kotlin-example/master/deployment/k8s/deployment.yaml`  
  
