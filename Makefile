@@ -1,5 +1,5 @@
 IMAGE_NAME:=jecklgamis/dropwizard-kotlin-example
-IMAGE_TAG:=latest
+IMAGE_TAG:=main
 
 default:
 	cat ./Makefile
@@ -14,13 +14,4 @@ run-bash:
 keystore:
 	@./generate-keystore.sh
 all: dist image
-push:
-	 docker push $(IMAGE_NAME):$(IMAGE_TAG)
-	 docker push $(IMAGE_NAME):latest
-tag:
-	 git tag -m "dropwizard-kotlin-example-v$(IMAGE_TAG)" -a "v$(IMAGE_TAG)"
-	 git push --tags
-release-it: dist image push
-	cd deployment/k8s && ./create-k8s-files.py --version $(IMAGE_TAG)
-	kubectl apply -f deployment/k8s/deployment-$(IMAGE_TAG).yaml
-
+up: all run
