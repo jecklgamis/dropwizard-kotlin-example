@@ -7,7 +7,7 @@ This is an example Dropwizard app using Kotlin.
 Docker: `docker run -p 8080:8080 -p 8081:8081 jecklgamis/dropwizard-kotlin-example:main`
 
 ## Running The App
-Ensure you have Java 8 installed.
+Ensure you have Java 11 installed.
 ```
 ./mvnw clean package
 java -jar target/dropwizard-kotlin-example.jar
