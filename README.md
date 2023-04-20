@@ -6,12 +6,9 @@ This is an example Dropwizard app using Kotlin.
 
 Docker: `docker run -p 8080:8080 -p 8443:8443 -p 8081:8081 jecklgamis/dropwizard-kotlin-example:main`
 
-Run on Kubernetes: `kubectl apply -f https://raw.githubusercontent.com/jecklgamis/dropwizard-kotlin-example/master/deployment/k8s/deployment.yaml`  
- 
 ## Running The App
 Ensure you have Java 8 installed.
 ```
-./generate-keystore.sh
 ./mvnw clean package
 java -jar target/dropwizard-kotlin-example.jar
 ```
@@ -34,60 +31,17 @@ Operational menu endpoint:
 * `http://localhost:8081`
 
 ## Running The App In Kubernetes
-This is an example Kubernetes deployment. This assumes you have a basic knowledge on [Kubernetes](https://kubernetes.io). 
-
-### The Kubernetes Pod and Service Definition
-```
-apiVersion: v1
-kind: Service
-metadata:
-  name: dropwizard-kotlin-example
-  labels:
-    app: dropwizard-kotlin-example
-spec:
-  type: NodePort
-  ports:
-    - port: 80
-      protocol: TCP
-      targetPort: 8080
-      name: http
-    - port: 443
-      protocol: TCP
-      targetPort: 8443
-      name: https
-  selector:
-    app: dropwizard-kotlin-example
-
----
-
-apiVersion: apps/v1
-kind: Deployment
-metadata:
-  name: dropwizard-kotlin-example
-spec:
-  selector:
-    matchLabels:
-      app: dropwizard-kotlin-example
-  replicas: 2
-  template:
-    metadata:
-      labels:
-        app: dropwizard-kotlin-example
-    spec:
-      containers:
-        - name: dropwizard-kotlin-example
-          image: jecklgamis/dropwizard-kotlin-example:latest
-          ports:
-            - containerPort: 8080
-            - containerPort: 8443
-```
+This is an example Kubernetes deployment. This assumes you have a basic knowledge on [Kubernetes](https://kubernetes.io).
 
 ### Requirements
-Ensure you have a working Kubernetes cluster and properly configured `kubectl` context (i.e `~/.kube/config`).
+* Ensure you can deploy to a Kubernetes cluster using `kubectl`
+* Ensure you have [Helm ](https://helm.sh/) installed
 
-#### Create pods and service
+## Create and deploy Helm chart
 ```
-kubectl apply -f  deployment/k8s/deployment.yaml
+cd deployment/k8s/helm 
+make all
+make install
 ```
 
 #### Verify pods are running
@@ -151,5 +105,6 @@ See [Service](https://kubernetes.io/docs/concepts/services-networking/service/) 
 
 #### Delete the deployment
 ```
-kubectl delete -f deployment/k8s/deployment.yaml 
+cd deployment/k8s/helm
+make uninstall 
 ```
