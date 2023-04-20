@@ -24,7 +24,6 @@ Point your browser to `http://localhost:8080` or use `curl` in command line.
 
 ```
 curl -v  http://localhost:8080/
-curl -v  --cacert src/main/resources/server.crt --resolve "dropwizard-kotlin-example:8443:127.0.0.1"  https://dropwizard-kotlin-example:8443/
 ```
 
 Operational menu endpoint:
