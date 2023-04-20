@@ -13,13 +13,6 @@ server:
   applicationConnectors:
     - type: http
       port: 8080
-    - type: https
-      port: 8443
-      certAlias: dropwizard-kotlin-example
-      keyStorePath: keystore.pfx
-      keyStorePassword: changeit
-      validateCerts: false
-      supportedProtocols: [TLSv1.2]
   adminConnectors:
     - type: http
       port: 8081

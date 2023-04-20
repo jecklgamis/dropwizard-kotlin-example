@@ -2,13 +2,13 @@ package dropwizard.kotlin.example.resource
 
 import com.codahale.metrics.annotation.Timed
 import com.google.gson.JsonParser
+import jakarta.ws.rs.GET
+import jakarta.ws.rs.Path
+import jakarta.ws.rs.Produces
+import jakarta.ws.rs.core.CacheControl
+import jakarta.ws.rs.core.MediaType
+import jakarta.ws.rs.core.Response
 import org.apache.commons.lang3.Validate
-import javax.ws.rs.GET
-import javax.ws.rs.Path
-import javax.ws.rs.Produces
-import javax.ws.rs.core.CacheControl
-import javax.ws.rs.core.MediaType
-import javax.ws.rs.core.Response
 
 @Path("/buildInfo")
 class BuildInfoResource(private val buildInfoJson: String) {

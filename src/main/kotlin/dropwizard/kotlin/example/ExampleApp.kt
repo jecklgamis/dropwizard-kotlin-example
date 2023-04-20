@@ -5,8 +5,8 @@ import dropwizard.kotlin.example.filter.DiagnosticContextFilter
 import dropwizard.kotlin.example.healthcheck.DefaultHealthCheck
 import dropwizard.kotlin.example.resource.BuildInfoResource
 import dropwizard.kotlin.example.resource.RootResource
-import io.dropwizard.Application
-import io.dropwizard.setup.Environment
+import io.dropwizard.core.Application
+import io.dropwizard.core.setup.Environment
 
 
 class ExampleApp : Application<ExampleAppConfig>() {
