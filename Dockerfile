@@ -1,5 +1,7 @@
-FROM jecklgamis/openjdk-8-jre:latest
+FROM ubuntu:22.04
 MAINTAINER Jerrico Gamis <jecklgamis@gmail.com>
+
+RUN apt update -y && apt install -y openjdk-11-jre-headless && rm -rf /var/lib/apt/lists/*
 
 ENV APP_HOME /app
 
@@ -11,7 +13,6 @@ RUN mkdir -m 0755 -p ${APP_HOME}/logs
 COPY target/dropwizard-kotlin-example.jar ${APP_HOME}/bin
 COPY docker-entrypoint.sh /
 COPY src/main/resources/config.yml ${APP_HOME}/config
-COPY src/main/resources/keystore.pfx ${APP_HOME}
 
 RUN chown -R app:app ${APP_HOME}
 RUN chmod +x /docker-entrypoint.sh
