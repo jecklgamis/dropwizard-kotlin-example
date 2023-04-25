@@ -1,6 +1,6 @@
 apiVersion: v2
 name: dropwizard-kotlin-example
-description: An example Spring Boot app using Scala
+description: An example Dropwizard app using Kotlin
 
 # A chart can be either an 'application' or a 'library' chart.
 #
