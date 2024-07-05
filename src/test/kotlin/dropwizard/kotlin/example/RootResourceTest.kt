@@ -15,13 +15,13 @@ import org.junit.jupiter.api.extension.ExtendWith
 
 
 @ExtendWith(DropwizardExtensionsSupport::class)
-class RootResourceIntTest {
+class RootResourceTest {
 
     companion object {
 
         @JvmField
-        val ext = DropwizardAppExtension(ExampleApp::class.java,
-                resourceFilePath("config.yml"),
+        val ext = DropwizardAppExtension(App::class.java,
+                resourceFilePath("config.yaml"),
                 ConfigOverride.randomPorts()
         )
     }

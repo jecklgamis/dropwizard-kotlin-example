@@ -10,13 +10,13 @@ import jakarta.ws.rs.core.MediaType
 import jakarta.ws.rs.core.Response
 import org.apache.commons.lang3.Validate
 
-@Path("/buildInfo")
+@Path("/build-info")
 class BuildInfoResource(private val buildInfoJson: String) {
 
     @GET
     @Produces(MediaType.APPLICATION_JSON)
     @Timed
-    fun default(): Response {
+    fun buildInfo(): Response {
         require(!buildInfoJson.isNullOrEmpty())
         val versionElem = JsonParser.parseString(buildInfoJson).asJsonObject.get("version")
         val version = versionElem?.asString ?: ""
@@ -24,7 +24,6 @@ class BuildInfoResource(private val buildInfoJson: String) {
 
         val cacheControl = CacheControl()
         cacheControl.isNoCache = true
-        return Response.ok().cacheControl(cacheControl)
-                .entity(buildInfoJson).build()
+        return Response.ok().cacheControl(cacheControl).entity(buildInfoJson).build()
     }
 }

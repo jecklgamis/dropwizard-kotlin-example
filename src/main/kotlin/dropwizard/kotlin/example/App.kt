@@ -9,21 +9,23 @@ import io.dropwizard.core.Application
 import io.dropwizard.core.setup.Environment
 
 
-class ExampleApp : Application<ExampleAppConfig>() {
+class App : Application<AppConfig>() {
 
-    override fun run(config: ExampleAppConfig, env: Environment) {
+    override fun run(config: AppConfig, env: Environment) {
         env.jersey().register(RootResource(config.appName))
         env.jersey().register(DiagnosticContextFilter())
         env.healthChecks().register("default", DefaultHealthCheck())
 
-        val resource = BuildInfoResource(Resources.toString(Resources.getResource("buildInfo.json"), Charsets.UTF_8))
+        val resource = BuildInfoResource(
+            Resources.toString(Resources.getResource("build-info.json"), Charsets.UTF_8)
+        )
         env.jersey().register(resource)
     }
 
     companion object {
         @JvmStatic
         fun main(args: Array<String>) {
-            ExampleApp().run(*args)
+            App().run(*args)
         }
     }
 

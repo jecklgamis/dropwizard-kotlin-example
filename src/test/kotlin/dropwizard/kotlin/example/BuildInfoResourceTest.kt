@@ -17,23 +17,24 @@ import org.junit.jupiter.api.extension.ExtendWith
 
 
 @ExtendWith(DropwizardExtensionsSupport::class)
-class BuildInfoResourceIntTest {
+class BuildInfoResourceTest {
 
     companion object {
         @JvmField
-        val ext = DropwizardAppExtension(ExampleApp::class.java,
-                resourceFilePath("config.yml"),
+        val ext = DropwizardAppExtension(
+            App::class.java, resourceFilePath("config.yaml"),
                 ConfigOverride.randomPorts())
     }
 
     @Test
-    fun testDefaultResource() {
-        val response = client().target("http://127.0.0.1:${ext.localPort}/buildInfo").request().get(Response::class.java)
+    fun testBuildInfo() {
+        val response =
+            client().target("http://127.0.0.1:${ext.localPort}/build-info").request().get(Response::class.java)
         assertEquals(200, response.status.toLong())
         assertEquals("application/json", response.headers.getFirst("Content-Type"))
         val entity = response.readEntity(Map::class.java)
         assertFalse(Strings.isNullOrEmpty(entity["version"] as String))
-        assertFalse(Strings.isNullOrEmpty(entity["buildTime"] as String))
+        assertFalse(Strings.isNullOrEmpty(entity["build-time"] as String))
         assertFalse(Strings.isNullOrEmpty(entity["branch"] as String))
     }
 
