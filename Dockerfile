@@ -12,7 +12,7 @@ RUN mkdir -m 0755 -p ${APP_HOME}/logs
 
 COPY target/dropwizard-kotlin-example.jar ${APP_HOME}/bin
 COPY docker-entrypoint.sh /
-COPY src/main/resources/config.yml ${APP_HOME}/config
+COPY src/main/resources/config.yaml ${APP_HOME}/config
 
 RUN chown -R app:app ${APP_HOME}
 RUN chmod +x /docker-entrypoint.sh
