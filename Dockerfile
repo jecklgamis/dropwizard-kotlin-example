@@ -1,7 +1,5 @@
-FROM ubuntu:22.04
+FROM amd64/eclipse-temurin:21-jre-jammy
 MAINTAINER Jerrico Gamis <jecklgamis@gmail.com>
-
-RUN apt update -y && apt install -y openjdk-11-jre-headless && rm -rf /var/lib/apt/lists/*
 
 ENV APP_HOME /app
 
