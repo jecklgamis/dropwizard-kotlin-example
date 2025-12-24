@@ -14,7 +14,7 @@ import org.apache.commons.lang3.Validate
 class BuildInfoResource(private val buildInfoJson: String) {
 
     @GET
-    @Produces(MediaType.APPLICATION_JSON)
+    @Produces(MediaType.TEXT_XML)
     @Timed
     fun buildInfo(): Response {
         require(!buildInfoJson.isNullOrEmpty())
