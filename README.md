@@ -4,13 +4,18 @@
 
 This is an example Dropwizard app using Kotlin.
 
+* Dropwizard 5.0.1
+* Kotlin 2.3.10
+* Java 25
+* Maven 3.9.12
+
 Docker: `docker run -p 8080:8080 -p 8081:8081 jecklgamis/dropwizard-kotlin-example:main`
 
 ## Running The App
-Ensure you have Java 21 installed.
+Ensure you have Java 25 installed.
 ```
 ./mvnw clean package
-java -jar target/dropwizard-kotlin-example.jar
+java -jar target/dropwizard-kotlin-example.jar server src/main/resources/config.yaml
 ```
 
 ## Running The App Using Docker
