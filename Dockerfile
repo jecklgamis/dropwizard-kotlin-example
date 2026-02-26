@@ -1,7 +1,5 @@
-FROM ubuntu:24.04
+FROM eclipse-temurin:25-jre
 LABEL org.opencontainers.image.authors="jecklgamis@gmail.com"
-
-RUN apt update -y && apt install -y openjdk-21-jre-headless && rm -rf /var/lib/apt/lists/*
 
 ENV APP_HOME=/app
 
@@ -22,4 +20,3 @@ EXPOSE 8443
 WORKDIR $APP_HOME
 COPY docker-entrypoint.sh /
 CMD ["/docker-entrypoint.sh"]
-
