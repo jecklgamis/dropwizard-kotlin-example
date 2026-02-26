@@ -1,0 +1,116 @@
+INFO  [2026-02-26 19:29:11,384] io.dropwizard.core.server.DefaultServerFactory: Registering jersey handler with root path prefix: /
+INFO  [2026-02-26 19:29:11,385] io.dropwizard.core.server.DefaultServerFactory: Registering admin handler with root path prefix: /
+INFO  [2026-02-26 19:29:11,407] io.dropwizard.core.server.ServerFactory: Starting App
+INFO  [2026-02-26 19:29:11,439] org.eclipse.jetty.setuid.SetUIDListener: Opened application@52d6d273{HTTP/1.1, (http/1.1)}{0.0.0.0:60366}
+INFO  [2026-02-26 19:29:11,439] org.eclipse.jetty.setuid.SetUIDListener: Opened admin@4667c4c1{HTTP/1.1, (http/1.1)}{0.0.0.0:60367}
+INFO  [2026-02-26 19:29:11,440] org.eclipse.jetty.server.Server: jetty-12.1.5; built: 2025-12-03T22:18:24.732Z; git: 4905d09d7b6801e792d7b73946cf7b66e4be25d6; jvm 25.0.2+10-LTS
+INFO  [2026-02-26 19:29:11,444] org.eclipse.jetty.server.handler.ContextHandler: Started idj.MutableServletContextHandler@3811510{ROOT,/,b=null,a=AVAILABLE,h=idrl.LogbackAccessRequestLogAwareHandler@24eeac69{STARTED}}
+INFO  [2026-02-26 19:29:11,585] io.dropwizard.jersey.DropwizardResourceConfig: The following paths were found for the configured resources:
+
+    GET     / (dropwizard.kotlin.example.resource.RootResource)
+    GET     /build-info (dropwizard.kotlin.example.resource.BuildInfoResource)
+
+INFO  [2026-02-26 19:29:11,586] org.eclipse.jetty.ee10.servlet.ServletContextHandler: Started idj.MutableServletContextHandler@3811510{ROOT,/,b=null,a=AVAILABLE,h=idrl.LogbackAccessRequestLogAwareHandler@24eeac69{STARTED}}
+INFO  [2026-02-26 19:29:11,587] io.dropwizard.core.setup.AdminEnvironment: tasks = 
+
+    POST    /tasks/log-level (io.dropwizard.servlets.tasks.LogConfigurationTask)
+    POST    /tasks/gc (io.dropwizard.servlets.tasks.GarbageCollectionTask)
+
+INFO  [2026-02-26 19:29:11,587] org.eclipse.jetty.server.handler.ContextHandler: Started idj.MutableServletContextHandler@1332dec4{ROOT,/,b=null,a=AVAILABLE,h=oeje10s.ServletHandler@544e3679{STARTED}}
+INFO  [2026-02-26 19:29:11,587] org.eclipse.jetty.ee10.servlet.ServletContextHandler: Started idj.MutableServletContextHandler@1332dec4{ROOT,/,b=null,a=AVAILABLE,h=oeje10s.ServletHandler@544e3679{STARTED}}
+INFO  [2026-02-26 19:29:11,592] org.eclipse.jetty.server.AbstractConnector: Started application@52d6d273{HTTP/1.1, (http/1.1)}{0.0.0.0:60366}
+INFO  [2026-02-26 19:29:11,593] org.eclipse.jetty.server.AbstractConnector: Started admin@4667c4c1{HTTP/1.1, (http/1.1)}{0.0.0.0:60367}
+INFO  [2026-02-26 19:29:11,593] org.eclipse.jetty.server.Server: Started oejs.Server@5939e24{STARTING}[12.1.5,sto=30000] @153ms
+INFO  [2026-02-26 19:29:11,699] org.eclipse.jetty.server.Server: Stopped oejs.Server@5939e24{STOPPING}[12.1.5,sto=30000]
+INFO  [2026-02-26 19:29:11,699] org.eclipse.jetty.server.Server: Shutdown oejs.Server@5939e24{STOPPING}[12.1.5,sto=30000]
+INFO  [2026-02-26 19:29:13,707] org.eclipse.jetty.server.AbstractConnector: Stopped application@52d6d273{HTTP/1.1, (http/1.1)}{0.0.0.0:0}
+INFO  [2026-02-26 19:29:13,708] org.eclipse.jetty.server.AbstractConnector: Stopped admin@4667c4c1{HTTP/1.1, (http/1.1)}{0.0.0.0:0}
+INFO  [2026-02-26 19:29:13,711] org.eclipse.jetty.ee10.servlet.ServletContextHandler: Stopped idj.MutableServletContextHandler@1332dec4{ROOT,/,b=null,a=AVAILABLE,h=oeje10s.ServletHandler@544e3679{STOPPED}}
+INFO  [2026-02-26 19:29:13,717] org.eclipse.jetty.ee10.servlet.ServletContextHandler: Stopped idj.MutableServletContextHandler@3811510{ROOT,/,b=null,a=AVAILABLE,h=idrl.LogbackAccessRequestLogAwareHandler@24eeac69{STOPPED}}
+INFO  [2026-02-26 19:29:13,781] io.dropwizard.core.server.DefaultServerFactory: Registering jersey handler with root path prefix: /
+INFO  [2026-02-26 19:29:13,781] io.dropwizard.core.server.DefaultServerFactory: Registering admin handler with root path prefix: /
+INFO  [2026-02-26 19:29:13,781] io.dropwizard.core.server.ServerFactory: Starting App
+INFO  [2026-02-26 19:29:13,783] org.eclipse.jetty.setuid.SetUIDListener: Opened application@6b6def36{HTTP/1.1, (http/1.1)}{0.0.0.0:60369}
+INFO  [2026-02-26 19:29:13,783] org.eclipse.jetty.setuid.SetUIDListener: Opened admin@3957d88b{HTTP/1.1, (http/1.1)}{0.0.0.0:60370}
+INFO  [2026-02-26 19:29:13,783] org.eclipse.jetty.server.Server: jetty-12.1.5; built: 2025-12-03T22:18:24.732Z; git: 4905d09d7b6801e792d7b73946cf7b66e4be25d6; jvm 25.0.2+10-LTS
+INFO  [2026-02-26 19:29:13,784] org.eclipse.jetty.server.handler.ContextHandler: Started idj.MutableServletContextHandler@7cb29ea8{ROOT,/,b=null,a=AVAILABLE,h=idrl.LogbackAccessRequestLogAwareHandler@b5c902{STARTED}}
+INFO  [2026-02-26 19:29:13,804] io.dropwizard.jersey.DropwizardResourceConfig: The following paths were found for the configured resources:
+
+    GET     / (dropwizard.kotlin.example.resource.RootResource)
+    GET     /build-info (dropwizard.kotlin.example.resource.BuildInfoResource)
+
+INFO  [2026-02-26 19:29:13,804] org.eclipse.jetty.ee10.servlet.ServletContextHandler: Started idj.MutableServletContextHandler@7cb29ea8{ROOT,/,b=null,a=AVAILABLE,h=idrl.LogbackAccessRequestLogAwareHandler@b5c902{STARTED}}
+INFO  [2026-02-26 19:29:13,804] io.dropwizard.core.setup.AdminEnvironment: tasks = 
+
+    POST    /tasks/log-level (io.dropwizard.servlets.tasks.LogConfigurationTask)
+    POST    /tasks/gc (io.dropwizard.servlets.tasks.GarbageCollectionTask)
+
+INFO  [2026-02-26 19:29:13,804] org.eclipse.jetty.server.handler.ContextHandler: Started idj.MutableServletContextHandler@7e848aea{ROOT,/,b=null,a=AVAILABLE,h=oeje10s.ServletHandler@786a3477{STARTED}}
+INFO  [2026-02-26 19:29:13,805] org.eclipse.jetty.ee10.servlet.ServletContextHandler: Started idj.MutableServletContextHandler@7e848aea{ROOT,/,b=null,a=AVAILABLE,h=oeje10s.ServletHandler@786a3477{STARTED}}
+INFO  [2026-02-26 19:29:13,805] org.eclipse.jetty.server.AbstractConnector: Started application@6b6def36{HTTP/1.1, (http/1.1)}{0.0.0.0:60369}
+INFO  [2026-02-26 19:29:13,806] org.eclipse.jetty.server.AbstractConnector: Started admin@3957d88b{HTTP/1.1, (http/1.1)}{0.0.0.0:60370}
+INFO  [2026-02-26 19:29:13,806] org.eclipse.jetty.server.Server: Started oejs.Server@52ca0ad4{STARTING}[12.1.5,sto=30000] @22ms
+INFO  [2026-02-26 19:29:13,924] org.eclipse.jetty.server.Server: Stopped oejs.Server@52ca0ad4{STOPPING}[12.1.5,sto=30000]
+INFO  [2026-02-26 19:29:13,924] org.eclipse.jetty.server.Server: Shutdown oejs.Server@52ca0ad4{STOPPING}[12.1.5,sto=30000]
+INFO  [2026-02-26 19:29:15,932] org.eclipse.jetty.server.AbstractConnector: Stopped application@6b6def36{HTTP/1.1, (http/1.1)}{0.0.0.0:0}
+INFO  [2026-02-26 19:29:15,933] org.eclipse.jetty.server.AbstractConnector: Stopped admin@3957d88b{HTTP/1.1, (http/1.1)}{0.0.0.0:0}
+INFO  [2026-02-26 19:29:15,934] org.eclipse.jetty.ee10.servlet.ServletContextHandler: Stopped idj.MutableServletContextHandler@7e848aea{ROOT,/,b=null,a=AVAILABLE,h=oeje10s.ServletHandler@786a3477{STOPPED}}
+INFO  [2026-02-26 19:29:15,936] org.eclipse.jetty.ee10.servlet.ServletContextHandler: Stopped idj.MutableServletContextHandler@7cb29ea8{ROOT,/,b=null,a=AVAILABLE,h=idrl.LogbackAccessRequestLogAwareHandler@b5c902{STOPPED}}
+INFO  [2026-02-26 19:30:44,176] io.dropwizard.core.server.DefaultServerFactory: Registering jersey handler with root path prefix: /
+INFO  [2026-02-26 19:30:44,177] io.dropwizard.core.server.DefaultServerFactory: Registering admin handler with root path prefix: /
+INFO  [2026-02-26 19:30:44,198] io.dropwizard.core.server.ServerFactory: Starting App
+INFO  [2026-02-26 19:30:44,230] org.eclipse.jetty.setuid.SetUIDListener: Opened application@52d6d273{HTTP/1.1, (http/1.1)}{0.0.0.0:60384}
+INFO  [2026-02-26 19:30:44,231] org.eclipse.jetty.setuid.SetUIDListener: Opened admin@4667c4c1{HTTP/1.1, (http/1.1)}{0.0.0.0:60385}
+INFO  [2026-02-26 19:30:44,232] org.eclipse.jetty.server.Server: jetty-12.1.5; built: 2025-12-03T22:18:24.732Z; git: 4905d09d7b6801e792d7b73946cf7b66e4be25d6; jvm 25.0.2+10-LTS
+INFO  [2026-02-26 19:30:44,234] org.eclipse.jetty.server.handler.ContextHandler: Started idj.MutableServletContextHandler@22d9bc14{ROOT,/,b=null,a=AVAILABLE,h=idrl.LogbackAccessRequestLogAwareHandler@346f41a9{STARTED}}
+INFO  [2026-02-26 19:30:44,395] io.dropwizard.jersey.DropwizardResourceConfig: The following paths were found for the configured resources:
+
+    GET     / (dropwizard.kotlin.example.resource.RootResource)
+    GET     /build-info (dropwizard.kotlin.example.resource.BuildInfoResource)
+
+INFO  [2026-02-26 19:30:44,396] org.eclipse.jetty.ee10.servlet.ServletContextHandler: Started idj.MutableServletContextHandler@22d9bc14{ROOT,/,b=null,a=AVAILABLE,h=idrl.LogbackAccessRequestLogAwareHandler@346f41a9{STARTED}}
+INFO  [2026-02-26 19:30:44,397] io.dropwizard.core.setup.AdminEnvironment: tasks = 
+
+    POST    /tasks/log-level (io.dropwizard.servlets.tasks.LogConfigurationTask)
+    POST    /tasks/gc (io.dropwizard.servlets.tasks.GarbageCollectionTask)
+
+INFO  [2026-02-26 19:30:44,397] org.eclipse.jetty.server.handler.ContextHandler: Started idj.MutableServletContextHandler@5ec9eefa{ROOT,/,b=null,a=AVAILABLE,h=oeje10s.ServletHandler@28b8f98a{STARTED}}
+INFO  [2026-02-26 19:30:44,397] org.eclipse.jetty.ee10.servlet.ServletContextHandler: Started idj.MutableServletContextHandler@5ec9eefa{ROOT,/,b=null,a=AVAILABLE,h=oeje10s.ServletHandler@28b8f98a{STARTED}}
+INFO  [2026-02-26 19:30:44,401] org.eclipse.jetty.server.AbstractConnector: Started application@52d6d273{HTTP/1.1, (http/1.1)}{0.0.0.0:60384}
+INFO  [2026-02-26 19:30:44,401] org.eclipse.jetty.server.AbstractConnector: Started admin@4667c4c1{HTTP/1.1, (http/1.1)}{0.0.0.0:60385}
+INFO  [2026-02-26 19:30:44,402] org.eclipse.jetty.server.Server: Started oejs.Server@46468f0{STARTING}[12.1.5,sto=30000] @170ms
+INFO  [2026-02-26 19:30:44,501] org.eclipse.jetty.server.Server: Stopped oejs.Server@46468f0{STOPPING}[12.1.5,sto=30000]
+INFO  [2026-02-26 19:30:44,501] org.eclipse.jetty.server.Server: Shutdown oejs.Server@46468f0{STOPPING}[12.1.5,sto=30000]
+INFO  [2026-02-26 19:30:46,509] org.eclipse.jetty.server.AbstractConnector: Stopped application@52d6d273{HTTP/1.1, (http/1.1)}{0.0.0.0:0}
+INFO  [2026-02-26 19:30:46,509] org.eclipse.jetty.server.AbstractConnector: Stopped admin@4667c4c1{HTTP/1.1, (http/1.1)}{0.0.0.0:0}
+INFO  [2026-02-26 19:30:46,512] org.eclipse.jetty.ee10.servlet.ServletContextHandler: Stopped idj.MutableServletContextHandler@5ec9eefa{ROOT,/,b=null,a=AVAILABLE,h=oeje10s.ServletHandler@28b8f98a{STOPPED}}
+INFO  [2026-02-26 19:30:46,518] org.eclipse.jetty.ee10.servlet.ServletContextHandler: Stopped idj.MutableServletContextHandler@22d9bc14{ROOT,/,b=null,a=AVAILABLE,h=idrl.LogbackAccessRequestLogAwareHandler@346f41a9{STOPPED}}
+INFO  [2026-02-26 19:30:46,586] io.dropwizard.core.server.DefaultServerFactory: Registering jersey handler with root path prefix: /
+INFO  [2026-02-26 19:30:46,586] io.dropwizard.core.server.DefaultServerFactory: Registering admin handler with root path prefix: /
+INFO  [2026-02-26 19:30:46,587] io.dropwizard.core.server.ServerFactory: Starting App
+INFO  [2026-02-26 19:30:46,589] org.eclipse.jetty.setuid.SetUIDListener: Opened application@69eb544f{HTTP/1.1, (http/1.1)}{0.0.0.0:60387}
+INFO  [2026-02-26 19:30:46,589] org.eclipse.jetty.setuid.SetUIDListener: Opened admin@7cb29ea8{HTTP/1.1, (http/1.1)}{0.0.0.0:60388}
+INFO  [2026-02-26 19:30:46,589] org.eclipse.jetty.server.Server: jetty-12.1.5; built: 2025-12-03T22:18:24.732Z; git: 4905d09d7b6801e792d7b73946cf7b66e4be25d6; jvm 25.0.2+10-LTS
+INFO  [2026-02-26 19:30:46,590] org.eclipse.jetty.server.handler.ContextHandler: Started idj.MutableServletContextHandler@2ba9f986{ROOT,/,b=null,a=AVAILABLE,h=idrl.LogbackAccessRequestLogAwareHandler@4aa3fc9a{STARTED}}
+INFO  [2026-02-26 19:30:46,612] io.dropwizard.jersey.DropwizardResourceConfig: The following paths were found for the configured resources:
+
+    GET     / (dropwizard.kotlin.example.resource.RootResource)
+    GET     /build-info (dropwizard.kotlin.example.resource.BuildInfoResource)
+
+INFO  [2026-02-26 19:30:46,612] org.eclipse.jetty.ee10.servlet.ServletContextHandler: Started idj.MutableServletContextHandler@2ba9f986{ROOT,/,b=null,a=AVAILABLE,h=idrl.LogbackAccessRequestLogAwareHandler@4aa3fc9a{STARTED}}
+INFO  [2026-02-26 19:30:46,612] io.dropwizard.core.setup.AdminEnvironment: tasks = 
+
+    POST    /tasks/log-level (io.dropwizard.servlets.tasks.LogConfigurationTask)
+    POST    /tasks/gc (io.dropwizard.servlets.tasks.GarbageCollectionTask)
+
+INFO  [2026-02-26 19:30:46,612] org.eclipse.jetty.server.handler.ContextHandler: Started idj.MutableServletContextHandler@47f2c722{ROOT,/,b=null,a=AVAILABLE,h=oeje10s.ServletHandler@52ca0ad4{STARTED}}
+INFO  [2026-02-26 19:30:46,612] org.eclipse.jetty.ee10.servlet.ServletContextHandler: Started idj.MutableServletContextHandler@47f2c722{ROOT,/,b=null,a=AVAILABLE,h=oeje10s.ServletHandler@52ca0ad4{STARTED}}
+INFO  [2026-02-26 19:30:46,613] org.eclipse.jetty.server.AbstractConnector: Started application@69eb544f{HTTP/1.1, (http/1.1)}{0.0.0.0:60387}
+INFO  [2026-02-26 19:30:46,613] org.eclipse.jetty.server.AbstractConnector: Started admin@7cb29ea8{HTTP/1.1, (http/1.1)}{0.0.0.0:60388}
+INFO  [2026-02-26 19:30:46,614] org.eclipse.jetty.server.Server: Started oejs.Server@6136e1fc{STARTING}[12.1.5,sto=30000] @24ms
+INFO  [2026-02-26 19:30:46,626] org.eclipse.jetty.server.Server: Stopped oejs.Server@6136e1fc{STOPPING}[12.1.5,sto=30000]
+INFO  [2026-02-26 19:30:46,626] org.eclipse.jetty.server.Server: Shutdown oejs.Server@6136e1fc{STOPPING}[12.1.5,sto=30000]
+INFO  [2026-02-26 19:30:48,634] org.eclipse.jetty.server.AbstractConnector: Stopped application@69eb544f{HTTP/1.1, (http/1.1)}{0.0.0.0:0}
+INFO  [2026-02-26 19:30:48,635] org.eclipse.jetty.server.AbstractConnector: Stopped admin@7cb29ea8{HTTP/1.1, (http/1.1)}{0.0.0.0:0}
+INFO  [2026-02-26 19:30:48,636] org.eclipse.jetty.ee10.servlet.ServletContextHandler: Stopped idj.MutableServletContextHandler@47f2c722{ROOT,/,b=null,a=AVAILABLE,h=oeje10s.ServletHandler@52ca0ad4{STOPPED}}
+INFO  [2026-02-26 19:30:48,646] org.eclipse.jetty.ee10.servlet.ServletContextHandler: Stopped idj.MutableServletContextHandler@2ba9f986{ROOT,/,b=null,a=AVAILABLE,h=idrl.LogbackAccessRequestLogAwareHandler@4aa3fc9a{STOPPED}}

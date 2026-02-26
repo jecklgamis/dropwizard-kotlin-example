@@ -4,7 +4,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Project Overview
 
-Dropwizard 5.0.1 REST API example written in Kotlin 2.3.0, targeting Java 21. Built with Maven (wrapper included). This is also a GitHub template repository with automated initialization via `.github/workflows/template.yml`.
+Dropwizard 5.0.1 REST API example written in Kotlin 2.3.0, targeting Java 21. Built with Maven (wrapper included). This is also a GitHub template repository with automated initialization via `.github/workflows/template.yaml`.
 
 ## Build & Run Commands
 
@@ -62,4 +62,4 @@ No linting or static analysis tools are configured.
 
 - **Dockerfile**: Ubuntu 24.04 + OpenJDK 21 JRE, runs as non-root `app` user, entrypoint via `docker-entrypoint.sh`
 - **Helm chart** in `deployment/k8s/helm/chart/`: includes Deployment, Service (ClusterIP 80→8080), Ingress, optional HPA. Helm operations via `deployment/k8s/helm/Makefile` (`make install`, `make upgrade`, `make uninstall`)
-- **CI**: GitHub Actions (`.github/workflows/build.yml`) builds on push/PR to main, pushes Docker image to Docker Hub on main branch only
+- **CI**: GitHub Actions (`.github/workflows/build.yaml`) builds on push/PR to main, pushes Docker image to Docker Hub on main branch only
