@@ -1,2 +1,7 @@
 # Created by .ignore support plugin (hsz.mobi)
 /.idea/
+/target/
+/logs/
+dependency-reduced-pom.xml
+pom.xml.versionsBackup
+src/main/resources/build-info.json
