@@ -10,7 +10,7 @@ import jakarta.ws.rs.core.MediaType
 import jakarta.ws.rs.core.Response
 import org.apache.commons.lang3.Validate
 
-@Path("/build-info")
+@Path("/build-info-v2")
 class BuildInfoResource(private val buildInfoJson: String) {
 
     @GET
