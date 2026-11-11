@@ -5,3 +5,8 @@
 dependency-reduced-pom.xml
 pom.xml.versionsBackup
 src/main/resources/build-info.json
+
+# resonate reports
+perf-tests/*-report.html
+perf-tests/*-report.json
+perf-tests/*-results.jsonl
